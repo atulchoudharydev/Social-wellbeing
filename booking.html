@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a place | Riverside Wellbeing Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><circle cx="13" cy="17" r="10"/><circle cx="21" cy="17" r="10"/></svg>
+        <span class="brand-text"><span class="brand-name">Riverside</span><span class="brand-sub">Wellbeing Hub</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span><span class="nav-toggle-label">Menu</span>
+      </button>
+      <div class="site-nav" id="site-nav">
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="news.html">News &amp; stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <div class="a11y" data-a11y></div>
+          <a class="btn btn-accent btn-sm" href="booking.html" aria-current="page">Book a place</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-head">
+      <div class="container page-head-grid">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="events.html">Events</a></li><li aria-current="page">Book a place</li></ol></nav>
+          <h1>Book a place</h1>
+          <p class="lede">It takes about two minutes. If you'd rather talk to someone, call <a href="tel:03001234567">0300 123 4567</a> and we'll book for you.</p>
+        </div>
+        <figure class="page-head-img"><img src="images/hero-friendship.jpg" alt="Three older friends laughing over a photo album" width="960" height="640"></figure>
+      </div>
+    </div>
+
+    <section class="section section-white" style="padding-top:2.5rem">
+      <div class="container wizard">
+        <div class="progress" id="progress">
+          <div class="progress-label"><strong id="progress-text">Step 1 of 4</strong><span id="progress-name">Choose an event</span></div>
+          <ol class="progress-track" aria-hidden="true"><li></li><li></li><li></li><li></li></ol>
+          <ol class="progress-steps" aria-label="Booking steps">
+            <li>Event</li><li>Your details</li><li>Your needs</li><li>Check and confirm</li>
+          </ol>
+        </div>
+
+        <div class="error-summary" id="error-summary" role="alert" tabindex="-1">
+          <h2>There is a problem</h2>
+          <ul id="error-list"></ul>
+        </div>
+
+        <form id="booking-form" novalidate>
+          <!-- Step 1 -->
+          <div class="step-panel" data-step="1" data-name="Choose an event">
+            <h2 tabindex="-1">Which event would you like to go to?</h2>
+            <div class="form-group">
+              <label for="filter-cat">Show events about</label>
+              <select id="filter-cat"><option value="all">All topics</option></select>
+            </div>
+            <fieldset class="form-group" id="group-event">
+              <legend class="visually-hidden">Event</legend>
+              <p class="field-error" id="err-event">Select an event</p>
+              <div class="option-list" id="event-options"></div>
+            </fieldset>
+            <div class="form-group" id="group-tickets">
+              <label for="tickets">How many places do you need?</label>
+              <span class="hint" id="tickets-hint">Include yourself. Up to 4 per booking.</span>
+              <p class="field-error" id="err-tickets">There are not enough places left</p>
+              <select id="tickets" class="input-narrow" aria-describedby="tickets-hint">
+                <option>1</option><option>2</option><option>3</option><option>4</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-panel" data-step="2" data-name="Your details" hidden>
+            <h2 tabindex="-1">Your details</h2>
+            <div class="form-group" id="group-name">
+              <label for="fullname">Full name</label>
+              <p class="field-error" id="err-name">Enter your full name</p>
+              <input type="text" id="fullname" autocomplete="name">
+            </div>
+            <div class="form-group" id="group-email">
+              <label for="email">Email address</label>
+              <span class="hint" id="email-hint">We'll send your confirmation here</span>
+              <p class="field-error" id="err-email">Enter an email address in the correct format, like name@example.com</p>
+              <input type="email" id="email" autocomplete="email" spellcheck="false" aria-describedby="email-hint">
+            </div>
+            <div class="form-group" id="group-phone">
+              <label for="phone">Phone number <span class="optional">(optional)</span></label>
+              <span class="hint" id="phone-hint">So we can let you know if anything changes</span>
+              <p class="field-error" id="err-phone">Enter a UK phone number, like 07700 900123</p>
+              <input type="tel" id="phone" autocomplete="tel" aria-describedby="phone-hint">
+            </div>
+            <fieldset class="form-group">
+              <legend>How should we contact you?</legend>
+              <label class="choice"><input type="radio" name="contact-pref" value="Email" checked> Email</label>
+              <label class="choice"><input type="radio" name="contact-pref" value="Text message"> Text message</label>
+              <label class="choice"><input type="radio" name="contact-pref" value="Phone call"> Phone call</label>
+            </fieldset>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-panel" data-step="3" data-name="Your needs" hidden>
+            <h2 tabindex="-1">Is there anything we can do to help you take part?</h2>
+            <p class="muted">This step is optional.</p>
+            <fieldset class="form-group">
+              <legend>Access needs</legend>
+              <span class="hint">Select all that apply</span>
+              <label class="choice"><input type="checkbox" name="needs" value="Step-free access"> Step-free or wheelchair access</label>
+              <label class="choice"><input type="checkbox" name="needs" value="Hearing loop"> Hearing loop</label>
+              <label class="choice"><input type="checkbox" name="needs" value="BSL interpreter"> British Sign Language interpreter</label>
+              <label class="choice"><input type="checkbox" name="needs" value="Large print"> Large print materials</label>
+              <label class="choice"><input type="checkbox" name="needs" value="Quiet space"> A quiet space to take breaks</label>
+            </fieldset>
+            <div class="form-group">
+              <label for="language">Preferred language</label>
+              <select id="language" class="input-narrow" style="max-width:20rem">
+                <option>English</option><option>Arabic</option><option>Polish</option><option>Punjabi</option><option>Romanian</option><option>Urdu</option><option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="notes">Anything else we should know? <span class="optional">(optional)</span></label>
+              <textarea id="notes" maxlength="500" aria-describedby="notes-count"></textarea>
+              <span class="hint" id="notes-count" aria-live="polite" style="margin-top:.4rem">500 characters remaining</span>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step-panel" data-step="4" data-name="Check and confirm" hidden>
+            <h2 tabindex="-1">Check your booking</h2>
+            <dl class="summary-list" id="summary"></dl>
+            <div class="form-group" id="group-consent" style="margin:0">
+              <p class="field-error" id="err-consent">Agree to us storing your details so we can confirm your booking</p>
+              <label class="choice"><input type="checkbox" id="consent"> I agree to the Hub storing my details to manage this booking. We will never share them.</label>
+            </div>
+          </div>
+
+          <div class="step-actions">
+            <button type="button" class="btn btn-secondary" id="back-btn" hidden><span data-icon="arrow-left"></span>Back</button>
+            <button type="submit" class="btn btn-primary" id="next-btn">Continue</button>
+          </div>
+        </form>
+
+        <!-- Confirmation -->
+        <div class="step-panel" id="confirmation" hidden>
+          <div class="confirm-mark"><span data-icon="check"></span></div>
+          <h2 tabindex="-1" id="confirm-title">You're booked in</h2>
+          <p id="confirm-text"></p>
+          <p>Your booking reference is <span class="ref-box" id="ref"></span></p>
+          <h3 style="margin-top:2rem">What happens next</h3>
+          <ul>
+            <li>We'll remind you the day before.</li>
+            <li>If you can't make it, please call us so someone else can have your place.</li>
+          </ul>
+          <div class="btn-row" style="margin-top:1.75rem">
+            <a class="btn btn-primary" href="events.html">Browse more events</a>
+            <button type="button" class="btn btn-secondary" onclick="window.print()">Print confirmation</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-name">Riverside Wellbeing Hub</p>
+          <p>12 Riverside Road<br>Riverside RV1 2AB</p>
+          <p>Monday to Friday, 9am to 8pm<br>Saturday, 9am to 4pm</p>
+        </div>
+        <nav aria-label="Footer">
+          <h2 class="footer-h">Explore</h2>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="booking.html">Book a place</a></li>
+            <li><a href="news.html">News &amp; stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-h">Get in touch</h2>
+          <ul>
+            <li><a href="tel:03001234567">0300 123 4567</a></li>
+            <li><a href="mailto:hello@riversidehub.example">hello@riversidehub.example</a></li>
+          </ul>
+        </div>
+        <div class="footer-urgent">
+          <h2 class="footer-h">Need urgent help?</h2>
+          <p>In an emergency call <strong>999</strong>. For urgent mental health support call <strong>NHS 111</strong> or text <strong>SHOUT</strong> to 85258.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Riverside Community Wellbeing Hub. A prototype for 505IT HCI &amp; Web Development. Fictional organisation.</p>
+        <span class="footer-links"><a href="guide.html">Prototype guide</a><a href="design-options.html">UI design options</a><a href="evaluation.html">Evaluation</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

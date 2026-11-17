@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evaluation and iteration | Riverside Wellbeing Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><circle cx="13" cy="17" r="10"/><circle cx="21" cy="17" r="10"/></svg>
+        <span class="brand-text"><span class="brand-name">Riverside</span><span class="brand-sub">Wellbeing Hub</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span><span class="nav-toggle-label">Menu</span>
+      </button>
+      <div class="site-nav" id="site-nav">
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="news.html">News &amp; stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <div class="a11y" data-a11y></div>
+          <a class="btn btn-accent btn-sm" href="booking.html">Book a place</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-head">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Evaluation</li></ol></nav>
+        <h1>Evaluation and iteration</h1>
+        <p class="lede">How the prototype was tested, what each round of evaluation found, and what changed as a result. This page supports the written report.</p>
+      </div>
+    </div>
+
+    <section class="section section-white" style="padding-top:3rem">
+      <div class="container doc">
+        <nav class="doc-toc" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+            <li><a href="#methods">Evaluation methods</a></li>
+            <li><a href="#iterations">Design iterations</a></li>
+            <li><a href="#findings">Findings and changes</a></li>
+            <li><a href="#accessibility">Accessibility results</a></li>
+            <li><a href="#heuristics">Heuristic review</a></li>
+            <li><a href="#usability">Usability test plan</a></li>
+          </ol>
+        </nav>
+
+        <div class="doc-body">
+          <!-- 1 -->
+          <section id="methods" aria-labelledby="methods-title">
+            <h2 id="methods-title">1. Evaluation methods</h2>
+            <p>The prototype was evaluated several times while it was being built, using a mix of expert review, automated testing and design feedback. Each method looks for a different kind of problem.</p>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Evaluation methods table">
+              <table class="data-table">
+                <thead><tr><th scope="col">Method</th><th scope="col">What it checks</th><th scope="col">How it was done</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Design review feedback</th><td>Overall look, feel and appeal</td><td>Review of each version of the site, with feedback recorded and acted on in the next version</td></tr>
+                  <tr><th scope="row">Heuristic evaluation</th><td>Usability problems</td><td>Each page reviewed against Nielsen's 10 usability heuristics</td></tr>
+                  <tr><th scope="row">Design critique</th><td>Generic or distracting visual patterns</td><td>Interface checked against the Impeccable design anti-pattern catalogue (impeccable.style)</td></tr>
+                  <tr><th scope="row">Automated accessibility testing</th><td>WCAG 2.2 A and AA failures</td><td>axe-core 4.10 run on all 7 pages at 1280px and 375px, plus error states, open menus and the article pop-up (20+ checks)</td></tr>
+                  <tr><th scope="row">Responsive testing</th><td>Layout at different screen sizes</td><td>Every page checked at 375px (phone), 800px (tablet) and 1280px (desktop) for overflow and readability</td></tr>
+                  <tr><th scope="row">Functional and keyboard testing</th><td>Whether key tasks work</td><td>Booking, search, filtering, calendar, slider and forms tested with mouse and keyboard only</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- 2 -->
+          <section id="iterations" aria-labelledby="iter-title">
+            <h2 id="iter-title">2. Design iterations</h2>
+            <p>The interface went through three main versions. Each was based on Option C (the guided hybrid) from the <a href="design-options.html">design options</a>; what changed was the visual design and the details of each component.</p>
+            <ol class="timeline">
+              <li>
+                <div class="ver">v1<small>First build</small></div>
+                <div>
+                  <h3>Working prototype of Option C</h3>
+                  <p>All six required pages built with the accordion directory, calendar, booking wizard and mobile menu. Teal and orange palette with emoji icons and a gradient hero.</p>
+                  <p><strong>Feedback:</strong> the interface felt cluttered and "tacky". Emoji icons looked different on each device and the gradient and colours felt dated.</p>
+                </div>
+              </li>
+              <li>
+                <div class="ver">v2<small>Redesign</small></div>
+                <div>
+                  <h3>Calmer, editorial redesign</h3>
+                  <p>New type pairing (Source Serif 4 and Public Sans), a consistent line-icon set, static HTML header and footer, a "Display" menu for text size and contrast, and a design critique to remove generic patterns.</p>
+                  <p><strong>Feedback:</strong> cleaner, but now "boring and plain". It needed real imagery and more colour to feel welcoming and engaging.</p>
+                </div>
+              </li>
+              <li>
+                <div class="ver">v3<small>Final</small></div>
+                <div>
+                  <h3>Warm, photographic and accessible</h3>
+                  <p>Real photography of diverse residents, a brighter teal, coral and sunshine palette, an accessible hero image slider, a stories carousel and topic photo cards. An automated accessibility audit was then run and every issue fixed.</p>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <!-- 3 -->
+          <section id="findings" aria-labelledby="findings-title">
+            <h2 id="findings-title">3. Findings and changes made</h2>
+            <p>Every problem below was found during evaluation and fixed in the final prototype. Severity follows Nielsen's scale: <span class="pill pill-high">High</span> stops or seriously hinders users, <span class="pill pill-med">Medium</span> causes difficulty, <span class="pill pill-low">Low</span> is cosmetic or minor.</p>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Findings and changes table">
+              <table class="data-table">
+                <thead><tr><th scope="col">Found by</th><th scope="col">Problem</th><th scope="col">Severity</th><th scope="col">Change made</th></tr></thead>
+                <tbody>
+                  <tr><td>Functional test</td><td>The booking form's "Back" button showed on step 1, where there is nothing to go back to</td><td><span class="pill pill-med">Medium</span></td><td>Fixed a CSS rule that overrode the <code>hidden</code> attribute, site-wide</td></tr>
+                  <tr><td>Heuristic review</td><td>The home slider moved on its own with no way to stop it (WCAG 2.2.2)</td><td><span class="pill pill-high">High</span></td><td>Added pause/play; rotation stops on hover and keyboard focus and never starts for users who prefer reduced motion</td></tr>
+                  <tr><td>Design feedback (v1)</td><td>Emoji icons looked different on each device and were read out by screen readers</td><td><span class="pill pill-low">Low</span></td><td>Replaced with one consistent set of line icons hidden from screen readers</td></tr>
+                  <tr><td>Robustness review</td><td>Navigation was added by JavaScript, so it would disappear if a script failed</td><td><span class="pill pill-high">High</span></td><td>Header and footer rewritten as plain HTML (progressive enhancement)</td></tr>
+                  <tr><td>Design critique</td><td>Generic patterns: labels above headings, cream background, vanity statistics, frosted header</td><td><span class="pill pill-low">Low</span></td><td>Removed; statistics replaced with practical facts (cost, referral, opening times, access)</td></tr>
+                  <tr><td>Design feedback (v2)</td><td>Interface felt plain and unengaging for a community service</td><td><span class="pill pill-med">Medium</span></td><td>Added photography, a brighter palette, image slider and stories carousel</td></tr>
+                  <tr><td>Accessibility audit</td><td>"Send us a message" button text had a 1:1 contrast ratio (a link rule overrode its colour)</td><td><span class="pill pill-high">High</span></td><td>Fixed the CSS so the button text is white on dark</td></tr>
+                  <tr><td>Accessibility audit</td><td>Coral labels were 4.45:1 on the grey background, just under the 4.5:1 minimum</td><td><span class="pill pill-med">Medium</span></td><td>Darkened coral to #b8411c (5.1:1 on grey, 5.4:1 on white)</td></tr>
+                  <tr><td>Accessibility audit</td><td>Comparison table header text was almost invisible (1.06:1)</td><td><span class="pill pill-high">High</span></td><td>Replaced outdated colour variables</td></tr>
+                  <tr><td>Accessibility audit</td><td>Sideways-scrolling table could not be reached by keyboard</td><td><span class="pill pill-med">Medium</span></td><td>Made the scroll area focusable and labelled it</td></tr>
+                  <tr><td>Accessibility audit</td><td>Two homepage landmarks had the same name</td><td><span class="pill pill-low">Low</span></td><td>Removed the duplicate label</td></tr>
+                  <tr><td>Responsive test</td><td>Photos stretched very tall on phones</td><td><span class="pill pill-med">Medium</span></td><td>Images now keep their aspect ratio at every size</td></tr>
+                  <tr><td>Responsive test</td><td>Links to a service topic (e.g. from the homepage) did not scroll to it</td><td><span class="pill pill-med">Medium</span></td><td>Page now scrolls to and opens the chosen topic once it has loaded</td></tr>
+                  <tr><td>Responsive test</td><td>Jump links landed underneath the sticky header</td><td><span class="pill pill-low">Low</span></td><td>Added a scroll offset so headings stay visible</td></tr>
+                  <tr><td>Responsive test</td><td>A "Topics" label was left on its own on phones after its list was hidden</td><td><span class="pill pill-low">Low</span></td><td>Label is now hidden with the list</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- 4 -->
+          <section id="accessibility" aria-labelledby="a11y-title">
+            <h2 id="a11y-title">4. Accessibility results</h2>
+            <p>Final automated results from axe-core 4.10, testing against WCAG 2.0, 2.1 and 2.2 at levels A and AA plus best-practice rules. Tested 10 November 2026.</p>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Accessibility results table">
+              <table class="data-table">
+                <thead><tr><th scope="col">Page</th><th scope="col">Desktop (1280px)</th><th scope="col">Phone (375px)</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Home</th><td><span class="pill pill-pass">0 violations</span></td><td><span class="pill pill-pass">0 violations</span></td></tr>
+                  <tr><th scope="row">Services</th><td><span class="pill pill-pass">0 violations</span></td><td><span class="pill pill-pass">0 violations</span></td></tr>
+                  <tr><th scope="row">Events</th><td><span class="pill pill-pass">0 violations</span></td><td><span class="pill pill-pass">0 violations</span></td></tr>
+                  <tr><th scope="row">Booking</th><td><span class="pill pill-pass">0 violations</span></td><td><span class="pill pill-pass">0 violations</span></td></tr>
+                  <tr><th scope="row">News and stories</th><td><span class="pill pill-pass">0 violations</span></td><td><span class="pill pill-pass">0 violations</span></td></tr>
+                  <tr><th scope="row">Contact</th><td><span class="pill pill-pass">0 violations</span></td><td><span class="pill pill-pass">0 violations</span></td></tr>
+                  <tr><th scope="row">UI design options</th><td><span class="pill pill-pass">0 violations</span></td><td><span class="pill pill-pass">0 violations</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top:1rem">Interactive states were also tested: form error messages, the open mobile menu and Display menu, the article pop-up and high-contrast mode. Automated tools find only part of all accessibility problems, so keyboard-only and zoom testing were also done by hand. Testing with screen-reader users would be the next step.</p>
+            <h3>Accessibility features</h3>
+            <ul>
+              <li>"Skip to main content" link and clear heading structure on every page</li>
+              <li>Highly visible yellow and black keyboard focus indicator</li>
+              <li>Display menu for larger text and high contrast, remembered between visits</li>
+              <li>Forms with visible labels, hints, an error summary linking to each problem and inline error messages</li>
+              <li>Accordion, carousel, dialog and step-by-step form follow WAI-ARIA Authoring Practices</li>
+              <li>Movement respects the "reduce motion" setting; every photo has descriptive alt text</li>
+              <li>Buttons and links at least 44 by 44 pixels for easier tapping</li>
+            </ul>
+          </section>
+
+          <!-- 5 -->
+          <section id="heuristics" aria-labelledby="heur-title">
+            <h2 id="heur-title">5. Heuristic review of the final design</h2>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Heuristic review table">
+              <table class="data-table">
+                <thead><tr><th scope="col">Nielsen heuristic</th><th scope="col">How the final design addresses it</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Visibility of system status</th><td>Booking progress bar ("Step 2 of 4"), places left on each event, live result counts when searching or filtering</td></tr>
+                  <tr><th scope="row">Match with the real world</th><td>Plain English, topics named after people's needs, dates written in full</td></tr>
+                  <tr><th scope="row">User control and freedom</th><td>Back button and "Change" links when booking, slider pause, clear date filter, Escape closes menus and dialogs</td></tr>
+                  <tr><th scope="row">Consistency and standards</th><td>One set of colours, icons, buttons and spacing across every page; familiar patterns such as an accordion and calendar</td></tr>
+                  <tr><th scope="row">Error prevention</th><td>Each booking step is checked before moving on; full events cannot be selected; ticket numbers checked against places left</td></tr>
+                  <tr><th scope="row">Recognition rather than recall</th><td>Review step shows every answer; current page shown in the navigation; breadcrumbs</td></tr>
+                  <tr><th scope="row">Flexibility and efficiency</th><td>Search, topic filters, "Open all", homepage shortcuts straight to booking; phone booking for people who prefer it</td></tr>
+                  <tr><th scope="row">Aesthetic and minimalist design</th><td>Progressive disclosure keeps pages short; photos support the content rather than decorate it</td></tr>
+                  <tr><th scope="row">Help users recover from errors</th><td>Error summary links to each problem field, with specific messages such as "Enter an email address in the correct format"</td></tr>
+                  <tr><th scope="row">Help and documentation</th><td>Hints under form fields, FAQs on the contact page, phone number on every page</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- 6 -->
+          <section id="usability" aria-labelledby="ut-title">
+            <h2 id="ut-title">6. Usability test plan</h2>
+            <p>The next round of evaluation is task-based testing with 5 people who reflect the Hub's users: an older adult, a parent, a younger adult, someone with low confidence online, and someone who uses a screen reader or magnification. Each person tries the tasks below while thinking aloud.</p>
+            <ol class="steps-list">
+              <li><h3>Find support for anxiety</h3><p>Success: reaches the Mental health section of the service directory and names a service.</p></li>
+              <li><h3>Book 2 places on a health walk</h3><p>Success: completes the booking and sees a reference number.</p></li>
+              <li><h3>Find out when the Hub is open on Saturday</h3><p>Success: finds the opening times on the Contact page or homepage.</p></li>
+              <li><h3>Make the text bigger</h3><p>Success: uses the Display menu to choose a larger text size.</p></li>
+              <li><h3>Read a resident's success story</h3><p>Success: opens a story from the homepage carousel or the News page.</p></li>
+            </ol>
+            <h3>What will be measured</h3>
+            <ul>
+              <li>Task completion rate and time on task</li>
+              <li>Errors and moments of hesitation</li>
+              <li>System Usability Scale (SUS) score after the session</li>
+              <li>Comments, recorded and grouped into themes</li>
+            </ul>
+            <p>Problems found will be rated for severity and fixed in the same way as the findings above.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-name">Riverside Wellbeing Hub</p>
+          <p>12 Riverside Road<br>Riverside RV1 2AB</p>
+          <p>Monday to Friday, 9am to 8pm<br>Saturday, 9am to 4pm</p>
+        </div>
+        <nav aria-label="Footer">
+          <h2 class="footer-h">Explore</h2>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="booking.html">Book a place</a></li>
+            <li><a href="news.html">News &amp; stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-h">Get in touch</h2>
+          <ul>
+            <li><a href="tel:03001234567">0300 123 4567</a></li>
+            <li><a href="mailto:hello@riversidehub.example">hello@riversidehub.example</a></li>
+          </ul>
+        </div>
+        <div class="footer-urgent">
+          <h2 class="footer-h">Need urgent help?</h2>
+          <p>In an emergency call <strong>999</strong>. For urgent mental health support call <strong>NHS 111</strong> or text <strong>SHOUT</strong> to 85258.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Riverside Community Wellbeing Hub. A prototype for 505IT HCI &amp; Web Development. Fictional organisation.</p>
+        <span class="footer-links"><a href="guide.html">Prototype guide</a><a href="design-options.html">UI design options</a><a href="evaluation.html">Evaluation</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

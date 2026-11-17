@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Riverside Community Wellbeing Hub: free local health and wellbeing services, events and support in one place.">
+  <title>Riverside Wellbeing Hub: health and wellbeing support for everyone</title>
+  <link rel="preload" as="image" href="images/hero-community.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><circle cx="13" cy="17" r="10"/><circle cx="21" cy="17" r="10"/></svg>
+        <span class="brand-text"><span class="brand-name">Riverside</span><span class="brand-sub">Wellbeing Hub</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span><span class="nav-toggle-label">Menu</span>
+      </button>
+      <div class="site-nav" id="site-nav">
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="news.html">News &amp; stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <div class="a11y" data-a11y></div>
+          <a class="btn btn-accent btn-sm" href="booking.html">Book a place</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <h1 class="visually-hidden">Riverside Community Wellbeing Hub</h1>
+
+    <!-- Hero image slider -->
+    <section class="hero-slider" id="hero-slider" aria-roledescription="carousel" aria-label="Welcome to the Hub">
+      <div class="slides" aria-live="off">
+        <div class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 4" data-title="Welcome">
+          <img src="images/hero-community.jpg" alt="Four friends with arms around each other looking out over hills at sunset">
+          <div class="slide-content container">
+            <span class="slide-tag"><span data-icon="heart"></span>Free and open to everyone</span>
+            <h2>Local support for your health and wellbeing</h2>
+            <p>Find free services, join an activity or talk to someone, whatever your age or situation. Most support needs no referral.</p>
+            <div class="btn-row">
+              <a class="btn btn-accent" href="services.html">Find support <span data-icon="arrow"></span></a>
+              <a class="btn btn-outline-light" href="events.html">See what's on</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 4" data-title="Get active">
+          <img src="images/hero-yoga.jpg" alt="A small group stretching together in a bright yoga studio" loading="lazy">
+          <div class="slide-content container">
+            <span class="slide-tag"><span data-icon="activity"></span>Physical activity</span>
+            <h2>Get active at your own pace</h2>
+            <p>Health walks, chair yoga and family fitness sessions for every age and ability. No experience needed.</p>
+            <div class="btn-row">
+              <a class="btn btn-accent" href="events.html">Browse activities <span data-icon="arrow"></span></a>
+              <a class="btn btn-outline-light" href="services.html#physical-activity">About our classes</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 4" data-title="Families">
+          <img src="images/hero-family.jpg" alt="Parents and their young son building with colourful blocks on the floor" loading="lazy">
+          <div class="slide-content container">
+            <span class="slide-tag"><span data-icon="users"></span>Family support</span>
+            <h2>Support for parents and carers</h2>
+            <p>Stay and play sessions, one-to-one parenting advice and a weekly group for young carers.</p>
+            <div class="btn-row">
+              <a class="btn btn-accent" href="services.html#family-support">Family support <span data-icon="arrow"></span></a>
+              <a class="btn btn-outline-light" href="booking.html">Book a session</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide" role="group" aria-roledescription="slide" aria-label="4 of 4" data-title="Friendship café">
+          <img src="images/hero-friendship.jpg" alt="Three older friends laughing over a photo album" loading="lazy">
+          <div class="slide-content container">
+            <span class="slide-tag"><span data-icon="cup"></span>Every Wednesday</span>
+            <h2>Make new friends at the Friendship café</h2>
+            <p>Tea, cake and good company every Wednesday afternoon. Come on your own or bring a friend.</p>
+            <div class="btn-row">
+              <a class="btn btn-accent" href="services.html#older-people">Find out more <span data-icon="arrow"></span></a>
+              <a class="btn btn-outline-light" href="contact.html?topic=volunteer">Volunteer with us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-controls">
+        <div class="container">
+          <button type="button" class="slider-btn" data-play aria-label="Pause automatic slide show"></button>
+          <button type="button" class="slider-btn" data-prev aria-label="Previous slide"><span data-icon="chev-left"></span></button>
+          <div class="slider-dots"></div>
+          <button type="button" class="slider-btn" data-next aria-label="Next slide"><span data-icon="chev-right"></span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coming up -->
+    <section class="upcoming-section" aria-labelledby="upcoming-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="upcoming-title">Coming up at the Hub</h2>
+          <a class="link-arrow" href="events.html">Full events calendar <span data-icon="arrow"></span></a>
+        </div>
+        <ul class="upcoming-strip" id="upcoming-list"></ul>
+      </div>
+    </section>
+
+    <!-- Topics -->
+    <section class="section section-tint" aria-labelledby="topics-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 id="topics-title">How can we help?</h2>
+            <p>Choose a topic to see the services available. Most are free and you don't need a referral.</p>
+          </div>
+          <a class="link-arrow" href="services.html">Full service directory <span data-icon="arrow"></span></a>
+        </div>
+        <ul class="topic-grid" id="topic-grid"></ul>
+      </div>
+    </section>
+
+    <!-- Help band -->
+    <section class="section" aria-labelledby="help-title" style="padding-bottom:0">
+      <div class="container">
+        <div class="help-band">
+          <div>
+            <h2 id="help-title">Not sure where to start?</h2>
+            <p>Our friendly team can talk things through and point you to the right support. Call, drop in, or send us a message.</p>
+          </div>
+          <div class="help-actions">
+            <a class="help-phone" href="tel:03001234567"><span data-icon="phone"></span>0300 123 4567</a>
+            <a class="btn btn-on-dark btn-sm" href="contact.html">Send us a message</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stories carousel -->
+    <section class="section">
+      <div class="container carousel" id="stories" role="region" aria-roledescription="carousel" aria-labelledby="stories-title">
+        <div class="carousel-head">
+          <div>
+            <h2 id="stories-title">From our community</h2>
+            <p>Real stories from people who use the Hub, and the latest news.</p>
+          </div>
+          <div class="carousel-nav">
+            <a class="link-arrow" href="news.html" style="margin-right:.75rem">All stories</a>
+            <button type="button" class="slider-btn" data-prev aria-label="Previous stories"><span data-icon="chev-left"></span></button>
+            <button type="button" class="slider-btn" data-next aria-label="Next stories"><span data-icon="chev-right"></span></button>
+          </div>
+        </div>
+        <ul class="carousel-track" id="story-track"></ul>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section-sun" aria-labelledby="about-title">
+      <div class="container about-grid" style="align-items:center">
+        <figure class="about-photo">
+          <img src="images/contact-hands.jpg" alt="A group of people in colourful jumpers stacking their hands together" loading="lazy">
+        </figure>
+        <div>
+          <h2 id="about-title">About the Hub</h2>
+          <p class="lede">Riverside Council runs the Hub with local NHS teams, charities and volunteers. It opened in 2026 so residents can find support close to home, in one building and online.</p>
+          <dl class="key-facts">
+            <div><dt>Cost</dt><dd>Almost everything is free. A few classes cost £2.</dd></div>
+            <div><dt>Referral</dt><dd>Not needed for most services. Just drop in or book.</dd></div>
+            <div><dt>Opening times</dt><dd>Monday to Friday 9am to 8pm, Saturday 9am to 4pm</dd></div>
+            <div><dt>Access</dt><dd>Step-free entrance, hearing loop, free parking and interpreters on request</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-name">Riverside Wellbeing Hub</p>
+          <p>12 Riverside Road<br>Riverside RV1 2AB</p>
+          <p>Monday to Friday, 9am to 8pm<br>Saturday, 9am to 4pm</p>
+        </div>
+        <nav aria-label="Footer">
+          <h2 class="footer-h">Explore</h2>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="booking.html">Book a place</a></li>
+            <li><a href="news.html">News &amp; stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-h">Get in touch</h2>
+          <ul>
+            <li><a href="tel:03001234567">0300 123 4567</a></li>
+            <li><a href="mailto:hello@riversidehub.example">hello@riversidehub.example</a></li>
+          </ul>
+        </div>
+        <div class="footer-urgent">
+          <h2 class="footer-h">Need urgent help?</h2>
+          <p>In an emergency call <strong>999</strong>. For urgent mental health support call <strong>NHS 111</strong> or text <strong>SHOUT</strong> to 85258.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Riverside Community Wellbeing Hub. A prototype for 505IT HCI &amp; Web Development. Fictional organisation.</p>
+        <span class="footer-links"><a href="guide.html">Prototype guide</a><a href="design-options.html">UI design options</a><a href="evaluation.html">Evaluation</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/slider.js"></script>
+  <script>
+    // Next four events with places left
+    document.getElementById("upcoming-list").innerHTML = EVENTS
+      .filter(e => e.spaces > 0).sort((a, b) => a.date - b.date).slice(0, 4)
+      .map(e => {
+        const c = categoryById(e.category);
+        return `
+        <li><a class="mini-event" href="booking.html?event=${e.id}" style="${tintStyle(c)}">
+          <span class="up-date" aria-hidden="true"><b>${e.date.getDate()}</b><span>${MONTHS[e.date.getMonth()].slice(0, 3)}</span></span>
+          <span><span class="up-title">${escapeHtml(e.title)}</span>
+            <span class="up-meta"><span class="visually-hidden">${formatDate(e.date)}, </span>${DAYS[e.date.getDay()]}, ${e.time.split(" ")[0]}</span></span>
+        </a></li>`;
+      }).join("");
+
+    // Topic photo cards
+    document.getElementById("topic-grid").innerHTML = SERVICE_CATEGORIES.map(c => `
+      <li class="topic-card">
+        <div class="topic-media">
+          <img src="${c.img}" alt="${c.imgAlt}" loading="lazy" width="960" height="640">
+          <span class="cat" style="${tintStyle(c)}">${icon(c.icon)}${c.services.length} services</span>
+        </div>
+        <div class="topic-body">
+          <h3><a href="services.html#${c.id}">${c.name}</a></h3>
+          <p>${c.summary}</p>
+          <span class="topic-more" aria-hidden="true">Explore ${icon("arrow")}</span>
+        </div>
+      </li>`).join("");
+
+    // Stories and news carousel
+    document.getElementById("story-track").innerHTML = NEWS.map(n => `
+      <li class="story-card">
+        <img src="${n.img}" alt="${n.imgAlt}" loading="lazy" width="960" height="640">
+        <div class="story-body">
+          <span class="badge ${n.type === "story" ? "" : "badge-news"}">${n.type === "story" ? "Success story" : "News"}</span>
+          <h3><a href="news.html#${n.id}">${escapeHtml(n.title)}</a></h3>
+          <p>${escapeHtml(n.summary)}</p>
+          <time datetime="${isoDate(n.date)}">${formatDate(n.date, { short: true, year: true })}</time>
+        </div>
+      </li>`).join("");
+
+    initHeroSlider(document.getElementById("hero-slider"));
+    initCarousel(document.getElementById("stories"));
+  </script>
+</body>
+</html>

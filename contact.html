@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact and support | Riverside Wellbeing Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><circle cx="13" cy="17" r="10"/><circle cx="21" cy="17" r="10"/></svg>
+        <span class="brand-text"><span class="brand-name">Riverside</span><span class="brand-sub">Wellbeing Hub</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span><span class="nav-toggle-label">Menu</span>
+      </button>
+      <div class="site-nav" id="site-nav">
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="news.html">News &amp; stories</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <div class="a11y" data-a11y></div>
+          <a class="btn btn-accent btn-sm" href="booking.html">Book a place</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-head">
+      <div class="container page-head-grid">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Contact</li></ol></nav>
+          <h1>Contact and support</h1>
+          <p class="lede">Ask a question, give feedback or get help finding the right service. We reply within two working days.</p>
+        </div>
+        <figure class="page-head-img"><img src="images/contact-hands.jpg" alt="A group of people in colourful jumpers stacking their hands together" width="960" height="640"></figure>
+      </div>
+    </div>
+
+    <section class="section section-white" style="padding-top:2.5rem">
+      <div class="container">
+        <div class="notice notice-urgent" style="margin-bottom:2.5rem">
+          <span data-icon="alert"></span>
+          <div>
+            <h2>Need help right now?</h2>
+            <p>This form isn't monitored 24 hours a day. If someone is in immediate danger, call <strong>999</strong>. For urgent mental health support call <strong>NHS 111</strong> and choose option 2, or text <strong>SHOUT</strong> to 85258.</p>
+          </div>
+        </div>
+
+        <div class="contact-layout">
+          <div>
+            <h2>Send us a message</h2>
+            <div class="error-summary" id="error-summary" role="alert" tabindex="-1">
+              <h2>There is a problem</h2>
+              <ul id="error-list"></ul>
+            </div>
+            <form id="contact-form" novalidate>
+              <div class="form-group" id="group-name">
+                <label for="c-name">Your name</label>
+                <p class="field-error">Enter your name</p>
+                <input type="text" id="c-name" autocomplete="name">
+              </div>
+              <div class="form-group" id="group-email">
+                <label for="c-email">Email address</label>
+                <p class="field-error">Enter an email address in the correct format, like name@example.com</p>
+                <input type="email" id="c-email" autocomplete="email" spellcheck="false">
+              </div>
+              <div class="form-group" id="group-topic">
+                <label for="c-topic">What is it about?</label>
+                <p class="field-error">Select a topic</p>
+                <select id="c-topic">
+                  <option value="">Choose a topic</option>
+                  <option value="services">Finding a service</option>
+                  <option value="booking">An event or booking</option>
+                  <option value="volunteer">Volunteering</option>
+                  <option value="story">Sharing my story</option>
+                  <option value="feedback">Feedback or a complaint</option>
+                  <option value="other">Something else</option>
+                </select>
+              </div>
+              <div class="form-group" id="group-msg">
+                <label for="c-msg">Your message</label>
+                <p class="field-error">Enter your message</p>
+                <textarea id="c-msg" maxlength="1000"></textarea>
+              </div>
+              <fieldset class="form-group">
+                <legend>Would you prefer a phone call?</legend>
+                <label class="choice"><input type="radio" name="callback" value="no" checked> No, reply by email</label>
+                <label class="choice"><input type="radio" name="callback" value="yes"> Yes, please call me</label>
+              </fieldset>
+              <div class="form-group" id="group-phone" hidden>
+                <label for="c-phone">Phone number</label>
+                <p class="field-error">Enter a phone number so we can call you</p>
+                <input type="tel" id="c-phone" autocomplete="tel">
+              </div>
+              <button type="submit" class="btn btn-primary">Send message</button>
+            </form>
+
+            <div class="step-panel" id="contact-success" hidden>
+              <div class="confirm-mark"><span data-icon="check"></span></div>
+              <h2 tabindex="-1" id="success-title">Message sent</h2>
+              <p style="margin:0">Thank you. We've received your message and will reply within two working days.</p>
+            </div>
+          </div>
+
+          <aside class="card" aria-labelledby="visit-title">
+            <h2 id="visit-title" style="font-size:1.5rem">Visit or call</h2>
+            <ul class="contact-list">
+              <li><span data-icon="pin"></span><span><strong>12 Riverside Road, Riverside RV1 2AB</strong>Bus routes 4, 12 and 27 stop outside</span></li>
+              <li><span data-icon="phone"></span><span><strong><a href="tel:03001234567">0300 123 4567</a></strong>Free from mobiles and landlines</span></li>
+              <li><span data-icon="mail"></span><span><strong><a href="mailto:hello@riversidehub.example">hello@riversidehub.example</a></strong>We reply within two working days</span></li>
+              <li><span data-icon="access"></span><span><strong>Accessible building</strong>Step-free entrance, accessible toilets, hearing loop, free parking</span></li>
+            </ul>
+            <h3 style="margin-top:1.5rem">Opening times</h3>
+            <table class="hours">
+              <caption class="visually-hidden">Opening times</caption>
+              <tbody>
+                <tr><th scope="row">Monday to Friday</th><td>9am to 8pm</td></tr>
+                <tr><th scope="row">Saturday</th><td>9am to 4pm</td></tr>
+                <tr><th scope="row">Sunday</th><td>Closed</td></tr>
+              </tbody>
+            </table>
+            <div class="map" role="img" aria-label="Map placeholder showing the Hub on Riverside Road">
+              <span class="map-pin"><span data-icon="pin"></span>Riverside Wellbeing Hub</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <div class="container narrow">
+        <h2 id="faq-title">Common questions</h2>
+        <div class="faq">
+          <details><summary>Do I need a referral?</summary><p>No. Most services are drop-in or self-referral. A few, like one-to-one counselling, start with a short chat to make sure it's the right fit.</p></details>
+          <details><summary>Is it free?</summary><p>Almost everything is free. A few classes cost £2 a session, and we never want cost to stop anyone taking part, so just ask.</p></details>
+          <details><summary>Can I bring someone with me?</summary><p>Yes. You're welcome to bring a friend, family member or carer.</p></details>
+          <details><summary>I don't use the internet. How can I book?</summary><p>Call us on 0300 123 4567 or come to reception and we'll book for you.</p></details>
+          <details><summary>Do you offer support in other languages?</summary><p>Yes. We can arrange interpreters, including British Sign Language, free of charge. Just let us know when you book.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-name">Riverside Wellbeing Hub</p>
+          <p>12 Riverside Road<br>Riverside RV1 2AB</p>
+          <p>Monday to Friday, 9am to 8pm<br>Saturday, 9am to 4pm</p>
+        </div>
+        <nav aria-label="Footer">
+          <h2 class="footer-h">Explore</h2>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="booking.html">Book a place</a></li>
+            <li><a href="news.html">News &amp; stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-h">Get in touch</h2>
+          <ul>
+            <li><a href="tel:03001234567">0300 123 4567</a></li>
+            <li><a href="mailto:hello@riversidehub.example">hello@riversidehub.example</a></li>
+          </ul>
+        </div>
+        <div class="footer-urgent">
+          <h2 class="footer-h">Need urgent help?</h2>
+          <p>In an emergency call <strong>999</strong>. For urgent mental health support call <strong>NHS 111</strong> or text <strong>SHOUT</strong> to 85258.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Riverside Community Wellbeing Hub. A prototype for 505IT HCI &amp; Web Development. Fictional organisation.</p>
+        <span class="footer-links"><a href="guide.html">Prototype guide</a><a href="design-options.html">UI design options</a><a href="evaluation.html">Evaluation</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const form = document.getElementById("contact-form");
+    const phoneGroup = document.getElementById("group-phone");
+    const topic = new URLSearchParams(location.search).get("topic");
+    if (topic) document.getElementById("c-topic").value = topic;
+
+    // Only ask for a phone number when a call back is wanted
+    form.querySelectorAll('input[name="callback"]').forEach(r =>
+      r.addEventListener("change", () => { phoneGroup.hidden = form.callback.value !== "yes"; }));
+
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      form.querySelectorAll(".has-error").forEach(g => g.classList.remove("has-error"));
+      const checks = [
+        ["group-name", "c-name", v => v.trim().length > 1, "Enter your name"],
+        ["group-email", "c-email", v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()), "Enter an email address in the correct format"],
+        ["group-topic", "c-topic", v => v !== "", "Select a topic"],
+        ["group-msg", "c-msg", v => v.trim().length > 0, "Enter your message"]
+      ];
+      if (form.callback.value === "yes")
+        checks.push(["group-phone", "c-phone", v => v.replace(/\D/g, "").length >= 10, "Enter a phone number so we can call you"]);
+
+      const errors = checks.filter(([, f, test]) => !test(document.getElementById(f).value));
+      errors.forEach(([g]) => document.getElementById(g).classList.add("has-error"));
+      const summary = document.getElementById("error-summary");
+      if (errors.length) {
+        document.getElementById("error-list").innerHTML = errors.map(([, f, , msg]) => `<li><a href="#${f}">${msg}</a></li>`).join("");
+        summary.classList.add("show");
+        summary.focus();
+        return;
+      }
+      summary.classList.remove("show");
+      form.hidden = true;
+      document.getElementById("contact-success").hidden = false;
+      document.getElementById("success-title").focus();
+    });
+
+    document.getElementById("error-list").addEventListener("click", e => {
+      const a = e.target.closest("a");
+      if (!a) return;
+      e.preventDefault();
+      document.getElementById(a.getAttribute("href").slice(1)).focus();
+    });
+  </script>
+</body>
+</html>

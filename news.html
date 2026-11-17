@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News and stories | Riverside Wellbeing Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><circle cx="13" cy="17" r="10"/><circle cx="21" cy="17" r="10"/></svg>
+        <span class="brand-text"><span class="brand-name">Riverside</span><span class="brand-sub">Wellbeing Hub</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span><span class="nav-toggle-label">Menu</span>
+      </button>
+      <div class="site-nav" id="site-nav">
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="news.html" aria-current="page">News &amp; stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <div class="a11y" data-a11y></div>
+          <a class="btn btn-accent btn-sm" href="booking.html">Book a place</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-head">
+      <div class="container page-head-grid">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">News and stories</li></ol></nav>
+          <h1>News and stories</h1>
+          <p class="lede">Updates from the Hub, and stories from residents about the difference local support has made.</p>
+        </div>
+        <figure class="page-head-img"><img src="images/news-volunteers.jpg" alt="A smiling volunteer holding a clipboard in a park" width="960" height="640"></figure>
+      </div>
+    </div>
+
+    <section class="section section-white" style="padding-top:2.5rem">
+      <div class="container">
+        <div class="feature-story" id="featured" style="margin-bottom:3rem"></div>
+
+        <div class="list-head">
+          <h2 style="font-size:1.5rem">All articles</h2>
+          <div class="filters" role="group" aria-label="Filter articles" style="margin:0">
+            <button type="button" class="chip" data-type="all" aria-pressed="true">All</button>
+            <button type="button" class="chip" data-type="news" aria-pressed="false">News</button>
+            <button type="button" class="chip" data-type="story" aria-pressed="false">Stories</button>
+          </div>
+        </div>
+        <p class="results-count" id="news-count" aria-live="polite"></p>
+        <ul class="article-list" id="article-list"></ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <h2>Has the Hub made a difference to you?</h2>
+        <p class="lede">Your story could encourage someone else to reach out. We'll always check with you before publishing anything.</p>
+        <a class="btn btn-primary" href="contact.html?topic=story">Tell us your story</a>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="article-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-inner">
+      <button type="button" class="dialog-close" id="dialog-close" aria-label="Close article"><span data-icon="close"></span></button>
+      <div id="dialog-content"></div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-name">Riverside Wellbeing Hub</p>
+          <p>12 Riverside Road<br>Riverside RV1 2AB</p>
+          <p>Monday to Friday, 9am to 8pm<br>Saturday, 9am to 4pm</p>
+        </div>
+        <nav aria-label="Footer">
+          <h2 class="footer-h">Explore</h2>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="booking.html">Book a place</a></li>
+            <li><a href="news.html">News &amp; stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-h">Get in touch</h2>
+          <ul>
+            <li><a href="tel:03001234567">0300 123 4567</a></li>
+            <li><a href="mailto:hello@riversidehub.example">hello@riversidehub.example</a></li>
+          </ul>
+        </div>
+        <div class="footer-urgent">
+          <h2 class="footer-h">Need urgent help?</h2>
+          <p>In an emergency call <strong>999</strong>. For urgent mental health support call <strong>NHS 111</strong> or text <strong>SHOUT</strong> to 85258.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Riverside Community Wellbeing Hub. A prototype for 505IT HCI &amp; Web Development. Fictional organisation.</p>
+        <span class="footer-links"><a href="guide.html">Prototype guide</a><a href="design-options.html">UI design options</a><a href="evaluation.html">Evaluation</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const dialog = document.getElementById("article-dialog");
+    const typeLabel = n => n.type === "story" ? "Story" : "News";
+    let lastTrigger = null;
+
+    const featured = NEWS.find(n => n.type === "story");
+    document.getElementById("featured").innerHTML = `
+      <figure class="feature-media"><img src="${featured.img}" alt="${featured.imgAlt}" width="960" height="640"></figure>
+      <div>
+        <span class="badge">Featured story</span>
+        <h2>${escapeHtml(featured.title)}</h2>
+        <blockquote class="pull-quote" style="font-size:1.4rem;margin:1rem 0 1.25rem">
+          <p style="margin:0">${escapeHtml(featured.quote)}</p>
+          <footer>${escapeHtml(featured.by)}</footer>
+        </blockquote>
+        <button type="button" class="btn btn-accent" data-open="${featured.id}">Read the story</button>
+      </div>`;
+
+    function render(type) {
+      const items = NEWS.filter(n => type === "all" || n.type === type);
+      document.getElementById("news-count").textContent = `${items.length} article${items.length === 1 ? "" : "s"}`;
+      document.getElementById("article-list").innerHTML = items.map(n => `
+        <li class="article-row" id="${n.id}">
+          <img class="article-thumb" src="${n.img}" alt="" loading="lazy" width="960" height="640">
+          <div>
+            <span class="badge ${n.type === "news" ? "badge-news" : ""}">${typeLabel(n)}</span>
+            <h3>${escapeHtml(n.title)}</h3>
+            <p>${escapeHtml(n.summary)}</p>
+            <p class="meta-line" style="margin-top:.4rem"><time datetime="${isoDate(n.date)}">${formatDate(n.date, { short: true, year: true })}</time></p>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm" data-open="${n.id}">Read<span class="visually-hidden"> ${escapeHtml(n.title)}</span></button>
+        </li>`).join("");
+    }
+
+    document.querySelector(".filters").addEventListener("click", e => {
+      const chip = e.target.closest(".chip");
+      if (!chip) return;
+      document.querySelectorAll(".filters .chip").forEach(c => c.setAttribute("aria-pressed", String(c === chip)));
+      render(chip.dataset.type);
+    });
+
+    function openArticle(id, trigger) {
+      const n = NEWS.find(x => x.id === id);
+      if (!n) return;
+      lastTrigger = trigger;
+      document.getElementById("dialog-content").innerHTML = `
+        <span class="badge">${typeLabel(n)}</span>
+        <h2 id="dialog-title">${escapeHtml(n.title)}</h2>
+        <p class="muted"><time datetime="${isoDate(n.date)}">${formatDate(n.date, { year: true })}</time></p>
+        <img class="dialog-img" src="${n.img}" alt="${n.imgAlt}">
+        <p>${escapeHtml(n.body)}</p>
+        ${n.quote ? `<blockquote class="pull-quote" style="font-size:1.4rem;margin-top:1.5rem"><p style="margin:0">${escapeHtml(n.quote)}</p><footer>${escapeHtml(n.by)}</footer></blockquote>` : ""}`;
+      dialog.showModal(); // native <dialog>: traps focus, closes on Escape
+    }
+
+    document.addEventListener("click", e => {
+      const b = e.target.closest("[data-open]");
+      if (b) openArticle(b.dataset.open, b);
+    });
+    document.getElementById("dialog-close").addEventListener("click", () => dialog.close());
+    dialog.addEventListener("click", e => { if (e.target === dialog) dialog.close(); });
+    dialog.addEventListener("close", () => { if (lastTrigger) lastTrigger.focus(); });
+
+    render("all");
+    if (location.hash) openArticle(location.hash.slice(1), null);
+  </script>
+</body>
+</html>

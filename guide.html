@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prototype guide | Riverside Wellbeing Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><circle cx="13" cy="17" r="10"/><circle cx="21" cy="17" r="10"/></svg>
+        <span class="brand-text"><span class="brand-name">Riverside</span><span class="brand-sub">Wellbeing Hub</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span><span class="nav-toggle-label">Menu</span>
+      </button>
+      <div class="site-nav" id="site-nav">
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="news.html">News &amp; stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <div class="a11y" data-a11y></div>
+          <a class="btn btn-accent btn-sm" href="booking.html">Book a place</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-head">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Prototype guide</li></ol></nav>
+        <h1>Prototype guide</h1>
+        <p class="lede">How to view, navigate and test this prototype. Written for reviewers and markers of the 505IT HCI and Web Development assessment.</p>
+      </div>
+    </div>
+
+    <section class="section section-white" style="padding-top:3rem">
+      <div class="container doc">
+        <nav class="doc-toc" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+            <li><a href="#viewing">Viewing the prototype</a></li>
+            <li><a href="#map">Site map</a></li>
+            <li><a href="#tasks">Things to try</a></li>
+            <li><a href="#access">Testing accessibility</a></li>
+            <li><a href="#tech">Technology used</a></li>
+            <li><a href="#limits">Prototype limitations</a></li>
+          </ol>
+        </nav>
+
+        <div class="doc-body">
+          <section id="viewing" aria-labelledby="view-title">
+            <h2 id="view-title">1. Viewing the prototype</h2>
+            <p>The prototype is a static website. It needs no installation, account or database.</p>
+            <ol class="steps-list">
+              <li><h3>Easiest: open the file</h3><p>Unzip the folder and double-click <code>index.html</code>. It opens in your web browser and every page and feature works.</p></li>
+              <li><h3>Alternative: run a local web server</h3><p>In the project folder run <code>python -m http.server 5500</code>, then go to <code>http://localhost:5500</code>.</p></li>
+              <li><h3>Check different devices</h3><p>Resize the browser window, or open developer tools (<kbd>F12</kbd>) and use device mode to view phone and tablet sizes.</p></li>
+            </ol>
+            <p style="margin-top:1rem">Works in current versions of Chrome, Edge, Firefox and Safari. An internet connection is only needed for the web fonts; without it the site falls back to system fonts.</p>
+          </section>
+
+          <section id="map" aria-labelledby="map-title">
+            <h2 id="map-title">2. Site map</h2>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Site map table">
+              <table class="data-table">
+                <thead><tr><th scope="col">Page</th><th scope="col">Brief requirement</th><th scope="col">Main UI patterns</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row"><a href="index.html">Home</a></th><td>Homepage introducing the hub</td><td>Image slider, upcoming events, topic cards, stories carousel</td></tr>
+                  <tr><th scope="row"><a href="services.html">Services</a></th><td>Service directory</td><td>Accordion, live search, topic jump links</td></tr>
+                  <tr><th scope="row"><a href="events.html">Events</a></th><td>Calendar or event listing</td><td>Calendar date picker, topic filters, event cards</td></tr>
+                  <tr><th scope="row"><a href="booking.html">Book a place</a></th><td>Booking or registration form</td><td>4-step wizard with validation and review</td></tr>
+                  <tr><th scope="row"><a href="contact.html">Contact</a></th><td>Contact or support page</td><td>Form, contact details, opening times, FAQs</td></tr>
+                  <tr><th scope="row"><a href="news.html">News and stories</a></th><td>Community news and success stories</td><td>Featured story, filters, article pop-up</td></tr>
+                  <tr><th scope="row"><a href="design-options.html">UI design options</a></th><td>Three UI options and the chosen one</td><td>Wireframes, comparison scoring</td></tr>
+                  <tr><th scope="row"><a href="evaluation.html">Evaluation</a></th><td>Feedback and evaluation outcomes</td><td>Iterations, findings, accessibility results</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top:1rem">The main menu is at the top of every page and collapses into a "Menu" button on smaller screens. The "Book a place" button is always in the header.</p>
+          </section>
+
+          <section id="tasks" aria-labelledby="tasks-title">
+            <h2 id="tasks-title">3. Things to try</h2>
+            <ol class="steps-list">
+              <li><h3>Book a place on an event</h3><p>Choose "Book a place" or a "Book" button on the Events page. Try "Continue" without filling anything in to see the error handling, then complete all 4 steps. Use a "Change" link on the review step to go back and edit an answer.</p></li>
+              <li><h3>Find a service</h3><p>On Services, type "walk" or "debt" in the search box, or open a topic. Use <kbd>↑</kbd> and <kbd>↓</kbd> to move between topic headings.</p></li>
+              <li><h3>Browse events by date</h3><p>On Events, pick a date with a dot on the calendar, then filter by a topic such as Physical activity.</p></li>
+              <li><h3>Use the homepage slider</h3><p>Use the arrows or the lines to change slides, and the pause button to stop it moving.</p></li>
+              <li><h3>Read a success story</h3><p>Open a story from the homepage carousel or the News page. Press <kbd>Esc</kbd> to close it.</p></li>
+              <li><h3>Send a message</h3><p>On Contact, choose "Yes, please call me" to see the phone number field appear, then submit the form.</p></li>
+            </ol>
+          </section>
+
+          <section id="access" aria-labelledby="access-title">
+            <h2 id="access-title">4. Testing accessibility</h2>
+            <ul>
+              <li><strong>Keyboard only:</strong> press <kbd>Tab</kbd> from the top of any page. The first stop is "Skip to main content". Everything can be used without a mouse.</li>
+              <li><strong>Display settings:</strong> open "Display" in the header to make the text larger or turn on high contrast. Your choice is remembered on every page.</li>
+              <li><strong>Zoom:</strong> zoom the browser to 200%. The layout reflows without sideways scrolling.</li>
+              <li><strong>Reduced motion:</strong> turn on "reduce motion" in your operating system. The slider then stops moving by itself and animations are switched off.</li>
+              <li><strong>Screen reader:</strong> try NVDA (Windows) or VoiceOver (Mac). Headings, landmarks, form errors and the booking steps are announced. Slide changes are announced once the slider is paused, so they don't interrupt reading.</li>
+            </ul>
+          </section>
+
+          <section id="tech" aria-labelledby="tech-title">
+            <h2 id="tech-title">5. Technology used</h2>
+            <ul>
+              <li><strong>HTML5:</strong> semantic elements, landmarks and native <code>&lt;dialog&gt;</code> and <code>&lt;details&gt;</code></li>
+              <li><strong>CSS3:</strong> custom properties (design tokens), Grid, Flexbox, media queries, <code>prefers-reduced-motion</code></li>
+              <li><strong>JavaScript (ES6):</strong> no frameworks or libraries; separate scripts for shared features, the directory, calendar, booking wizard and sliders</li>
+              <li><strong>WAI-ARIA:</strong> accordion, carousel, dialog and switch patterns from the W3C Authoring Practices Guide</li>
+              <li><strong>Testing:</strong> axe-core accessibility engine, browser device emulation, keyboard testing</li>
+            </ul>
+            <h3>Folder structure</h3>
+            <ul>
+              <li><code>*.html</code>: one file per page</li>
+              <li><code>css/style.css</code>: all styles and design tokens</li>
+              <li><code>js/</code>: <code>data.js</code> (sample content), <code>main.js</code> (shared), plus a script per feature</li>
+              <li><code>images/</code>: photographs, with sources in <code>images/CREDITS.md</code></li>
+            </ul>
+          </section>
+
+          <section id="limits" aria-labelledby="limits-title">
+            <h2 id="limits-title">6. Prototype limitations</h2>
+            <ul>
+              <li>There is no server or database. Bookings and messages show a confirmation but are not saved or emailed, and places left reset when the page is reloaded.</li>
+              <li>Event dates are generated relative to today, so the calendar always shows upcoming events.</li>
+              <li>The Hub, its staff, residents' names and stories are fictional. Photographs are licensed stock images from Unsplash and do not show real Hub users.</li>
+              <li>The map on the Contact page is a placeholder.</li>
+            </ul>
+            <p>A production version would add a booking database, email confirmations, a content management system for news and events, and accounts for managing bookings.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-name">Riverside Wellbeing Hub</p>
+          <p>12 Riverside Road<br>Riverside RV1 2AB</p>
+          <p>Monday to Friday, 9am to 8pm<br>Saturday, 9am to 4pm</p>
+        </div>
+        <nav aria-label="Footer">
+          <h2 class="footer-h">Explore</h2>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="booking.html">Book a place</a></li>
+            <li><a href="news.html">News &amp; stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-h">Get in touch</h2>
+          <ul>
+            <li><a href="tel:03001234567">0300 123 4567</a></li>
+            <li><a href="mailto:hello@riversidehub.example">hello@riversidehub.example</a></li>
+          </ul>
+        </div>
+        <div class="footer-urgent">
+          <h2 class="footer-h">Need urgent help?</h2>
+          <p>In an emergency call <strong>999</strong>. For urgent mental health support call <strong>NHS 111</strong> or text <strong>SHOUT</strong> to 85258.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Riverside Community Wellbeing Hub. A prototype for 505IT HCI &amp; Web Development. Fictional organisation.</p>
+        <span class="footer-links"><a href="guide.html">Prototype guide</a><a href="design-options.html">UI design options</a><a href="evaluation.html">Evaluation</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

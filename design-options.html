@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UI design options | Riverside Wellbeing Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <style>
+    /* Low-fidelity wireframe styling */
+    .wf-row { display: grid; grid-template-columns: 2.2fr 1fr; gap: 1.5rem; align-items: start; margin: 1.5rem 0; }
+    @media (max-width: 800px) { .wf-row { grid-template-columns: 1fr; } }
+    .frame { border: 2px solid #5f6b6b; border-radius: 10px; background: #fff; overflow: hidden; }
+    .frame-label { background: #e8ecec; font-size: .8rem; font-weight: 700; padding: .3rem .7rem; border-bottom: 2px solid #5f6b6b; color: #333; }
+    .frame-body { padding: .7rem; display: grid; gap: .5rem; }
+    .phone { max-width: 230px; margin: 0 auto; border-radius: 22px; }
+    .phone .frame-body { min-height: 380px; align-content: start; }
+    .b { background: #d9dfdf; border-radius: 4px; min-height: 18px; font-size: .7rem; color: #333; display: flex; align-items: center; justify-content: center; text-align: center; padding: .2rem; }
+    .b.dark { background: #4f5d5d; color: #fff; }
+    .b.acc { background: #ecd9cf; }
+    .b.pri { background: #b9dcd8; }
+    .b.line { min-height: 8px; background: #e6eaea; }
+    .r { display: grid; gap: .5rem; }
+    .c2 { grid-template-columns: 1fr 1fr; }
+    .c3 { grid-template-columns: repeat(3, 1fr); }
+    .c4 { grid-template-columns: repeat(4, 1fr); }
+    .nav { grid-template-columns: 1.2fr repeat(5, 1fr); }
+    .h40 { min-height: 40px; } .h60 { min-height: 60px; } .h90 { min-height: 90px; } .h120 { min-height: 120px; }
+    .option { border-top: 4px solid var(--green); padding-top: 1.5rem; margin-top: 2.5rem; }
+    .option.chosen { border-color: var(--clay); }
+    .pc { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 700px) { .pc { grid-template-columns: 1fr; } }
+    .pc ul { margin: 0; padding-left: 1.2rem; }
+    table.compare { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    table.compare th, table.compare td { border: 1px solid var(--line); padding: .6rem .7rem; text-align: left; vertical-align: top; }
+    table.compare thead th { background: var(--green); color: #fff; }
+    table.compare tbody th { background: var(--paper); }
+    .table-wrap { overflow-x: auto; }
+    .score { font-weight: 700; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><circle cx="13" cy="17" r="10"/><circle cx="21" cy="17" r="10"/></svg>
+        <span class="brand-text"><span class="brand-name">Riverside</span><span class="brand-sub">Wellbeing Hub</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span><span class="nav-toggle-label">Menu</span>
+      </button>
+      <div class="site-nav" id="site-nav">
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="news.html">News &amp; stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <div class="a11y" data-a11y></div>
+          <a class="btn btn-accent btn-sm" href="booking.html">Book a place</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-head">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">UI design options</li></ol></nav>
+        <h1>UI design options</h1>
+        <p class="lede">Three distinct interface concepts explored during the design phase, shown as low-fidelity wireframes for desktop and mobile. Option C was selected and implemented in this prototype.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <nav aria-label="Jump to option"><div class="filters">
+          <a class="chip" href="#opt-a">Option A: Card grid</a>
+          <a class="chip" href="#opt-b">Option B: Text-first tabs</a>
+          <a class="chip" href="#opt-c">Option C: Guided hybrid (chosen)</a>
+          <a class="chip" href="#compare">Comparison</a>
+        </div></nav>
+
+        <!-- ================= OPTION A ================= -->
+        <div class="option" id="opt-a">
+          <h2>Option A: Visual card grid</h2>
+          <p>A highly visual, image-led layout in which every content type (services, events, news) is a card in a responsive grid. Horizontal navigation on desktop collapses to a bottom tab bar on mobile. Booking is a single long form on one page.</p>
+          <div class="wf-row">
+            <div class="frame" role="img" aria-label="Option A desktop wireframe: top navigation bar, large image banner, a 4 by 2 grid of service cards, a row of 3 event cards, and a single long booking form.">
+              <div class="frame-label">Desktop: homepage</div>
+              <div class="frame-body">
+                <div class="r nav"><div class="b dark">Logo</div><div class="b">Home</div><div class="b">Services</div><div class="b">Events</div><div class="b">News</div><div class="b">Contact</div></div>
+                <div class="b h90">Full-width hero image + headline</div>
+                <div class="r c4"><div class="b pri h60">Card</div><div class="b pri h60">Card</div><div class="b pri h60">Card</div><div class="b pri h60">Card</div></div>
+                <div class="r c4"><div class="b pri h60">Card</div><div class="b pri h60">Card</div><div class="b pri h60">Card</div><div class="b pri h60">Card</div></div>
+                <div class="r c3"><div class="b acc h40">Event card</div><div class="b acc h40">Event card</div><div class="b acc h40">Event card</div></div>
+                <div class="b h60">Single long booking form (all 12 fields on one page)</div>
+              </div>
+            </div>
+            <div class="frame phone" role="img" aria-label="Option A mobile wireframe: stacked cards with a fixed bottom tab bar.">
+              <div class="frame-label">Mobile</div>
+              <div class="frame-body">
+                <div class="b dark">Logo</div>
+                <div class="b h60">Hero image</div>
+                <div class="b pri h40">Card</div><div class="b pri h40">Card</div><div class="b pri h40">Card</div><div class="b pri h40">Card</div>
+                <div class="r c4" style="margin-top:auto"><div class="b dark">Home</div><div class="b dark">Find</div><div class="b dark">Events</div><div class="b dark">Contact</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="pc">
+            <div><h3>Strengths</h3><ul><li>Visually engaging; scannable at a glance (Gestalt proximity and similarity).</li><li>Cards reflow naturally across breakpoints.</li><li>Familiar pattern from popular apps.</li></ul></div>
+            <div><h3>Weaknesses</h3><ul><li>16+ cards on one screen increases cognitive load (Hick's Law).</li><li>Image-heavy: slower on low-bandwidth connections, relies on good alt text.</li><li>Long single-page form is daunting for low-confidence users, and errors are found late.</li></ul></div>
+          </div>
+        </div>
+
+        <!-- ================= OPTION B ================= -->
+        <div class="option" id="opt-b">
+          <h2>Option B: Text-first with tabs</h2>
+          <p>A minimal, GOV.UK-inspired design: plain text links, generous whitespace and no imagery. Services are grouped in horizontal tabs, events are a simple chronological list, and booking is a single form. Navigation is a text list that wraps on mobile.</p>
+          <div class="wf-row">
+            <div class="frame" role="img" aria-label="Option B desktop wireframe: simple header with text links, heading and paragraph, a row of tabs for service categories, a text list of services, and a chronological list of events.">
+              <div class="frame-label">Desktop: services page</div>
+              <div class="frame-body">
+                <div class="r c2"><div class="b dark">Logo</div><div class="b">Text links · Text links · Text links</div></div>
+                <div class="b line" style="width:60%"></div><div class="b line"></div><div class="b line" style="width:80%"></div>
+                <div class="r c4"><div class="b dark">Tab 1</div><div class="b">Tab 2</div><div class="b">Tab 3</div><div class="b">Tab 4</div></div>
+                <div class="b h40">Service name + description (text)</div>
+                <div class="b h40">Service name + description (text)</div>
+                <div class="b h40">Events: plain chronological list</div>
+                <div class="b h40">Single-page form</div>
+              </div>
+            </div>
+            <div class="frame phone" role="img" aria-label="Option B mobile wireframe: text-only stacked layout with tabs that overflow horizontally.">
+              <div class="frame-label">Mobile</div>
+              <div class="frame-body">
+                <div class="b dark">Logo</div>
+                <div class="b">Links wrap onto 2–3 lines</div>
+                <div class="b line"></div><div class="b line"></div>
+                <div class="r c3"><div class="b dark">Tab</div><div class="b">Tab</div><div class="b">Ta…</div></div>
+                <div class="b h40">Text</div><div class="b h40">Text</div><div class="b h40">Text</div>
+              </div>
+            </div>
+          </div>
+          <div class="pc">
+            <div><h3>Strengths</h3><ul><li>Very fast, lightweight and highly accessible by default.</li><li>Clear typographic hierarchy, suits screen readers and low literacy.</li><li>Easy to maintain.</li></ul></div>
+            <div><h3>Weaknesses</h3><ul><li>Tabs with 6 categories overflow on mobile and hide content.</li><li>Feels institutional, which may discourage people with low motivation (e.g. low mood).</li><li>No visual date overview: hard to see "what's on this week".</li></ul></div>
+          </div>
+        </div>
+
+        <!-- ================= OPTION C ================= -->
+        <div class="option chosen" id="opt-c">
+          <h2>Option C: Guided hybrid <span class="badge">Selected and implemented</span></h2>
+          <p>Combines patterns where each works best: <strong>cards</strong> on the homepage for browsing, an <strong>accordion</strong> service directory with search, a <strong>calendar date-picker</strong> alongside an event list, a <strong>multi-step wizard</strong> for booking, a task-based "I want to…" panel and a <strong>hamburger menu</strong> on mobile. The homepage opens with an <strong>image slider</strong> (with pause, previous and next controls) and uses real photography throughout to make the Hub feel warm and human. A "Display" menu in the header offers larger text and high contrast.</p>
+          <div class="wf-row">
+            <div class="frame" role="img" aria-label="Option C desktop wireframe: header with navigation, hero with an I want to panel, service cards, an events page with calendar on the left and list on the right, an accordion directory and a 4-step booking progress bar.">
+              <div class="frame-label">Desktop: key screens</div>
+              <div class="frame-body">
+                <div class="r nav"><div class="b dark">Logo</div><div class="b">Home</div><div class="b">Services</div><div class="b">Events</div><div class="b">Display</div><div class="b pri">Book</div></div>
+                <div class="b pri h90">Full-width image slider: headline + 2 actions · ‹ ● ○ ○ ○ › ❚❚</div>
+                <div class="r c4"><div class="b">Event</div><div class="b">Event</div><div class="b">Event</div><div class="b">Event</div></div>
+                <div class="r c2"><div class="b h40">Topic row</div><div class="b h40">Topic row</div></div>
+                <div class="r" style="grid-template-columns:1fr 2fr"><div class="b acc h90">Calendar date-picker</div><div class="r"><div class="b h40">Event</div><div class="b h40">Event</div></div></div>
+                <div class="b">▸ Accordion: Mental health (3)</div><div class="b">▸ Accordion: Physical activity (3)</div>
+                <div class="r c4"><div class="b dark">① Event</div><div class="b">② Details</div><div class="b">③ Needs</div><div class="b">④ Confirm</div></div>
+              </div>
+            </div>
+            <div class="frame phone" role="img" aria-label="Option C mobile wireframe: hamburger menu button, stacked hero and task links, collapsed accordions and a one-step-at-a-time booking form.">
+              <div class="frame-label">Mobile</div>
+              <div class="frame-body">
+                <div class="r c2"><div class="b dark">Logo</div><div class="b dark">☰ Menu</div></div>
+                <div class="b pri h60">Image slider</div>
+                <div class="b h40">Coming up</div>
+                <div class="b">▸ Mental health</div><div class="b">▸ Physical activity</div><div class="b">▸ Family support</div>
+                <div class="b">● ○ ○ ○ Step 1 of 4</div>
+                <div class="b h60">One question group per screen</div>
+                <div class="r c2"><div class="b">Back</div><div class="b dark">Continue</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="pc">
+            <div><h3>Strengths</h3><ul><li>Progressive disclosure (accordion, wizard) reduces cognitive load for low digital literacy users.</li><li>Calendar gives a visual overview <em>and</em> a list provides an accessible alternative.</li><li>Wizard validates each step, so errors are caught early and the error summary links to each field (Nielsen: error prevention and recovery).</li><li>Topics are written as people's needs, and the homepage leads with what is happening soon, which matches how residents think rather than how the council is organised.</li></ul></div>
+            <div><h3>Weaknesses / mitigations</h3><ul><li>More complex to build and test. <em>Mitigated with WAI-ARIA patterns and keyboard support.</em></li><li>Hamburger hides navigation on mobile. <em>Mitigated by a labelled "Menu" button and key CTAs on the homepage.</em></li><li>Wizard adds clicks for expert users. <em>Mitigated with a progress bar and "Change" links on the review step.</em></li></ul></div>
+          </div>
+        </div>
+
+        <!-- ================= COMPARISON ================= -->
+        <div class="option" id="compare">
+          <h2>Comparison against design criteria</h2>
+          <p>Each option was scored from 1 (poor) to 5 (excellent) against criteria drawn from the brief, WCAG 2.2 and Nielsen's usability heuristics.</p>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Comparison table, scrolls sideways on small screens">
+            <table class="compare">
+              <caption class="visually-hidden">Scores for options A, B and C against design criteria</caption>
+              <thead><tr><th scope="col">Criterion</th><th scope="col">A: Card grid</th><th scope="col">B: Text-first tabs</th><th scope="col">C: Guided hybrid</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Accessibility (WCAG 2.2 AA)</th><td><span class="score">3</span>: image reliance, dense layout</td><td><span class="score">5</span>: simple semantic HTML</td><td><span class="score">4</span>: ARIA patterns, toolbar, focus management</td></tr>
+                <tr><th scope="row">Low digital literacy</th><td><span class="score">3</span>: many choices at once</td><td><span class="score">4</span>: plain and predictable</td><td><span class="score">5</span>: guided tasks and steps</td></tr>
+                <tr><th scope="row">Mobile responsiveness</th><td><span class="score">4</span>: cards reflow well</td><td><span class="score">2</span>: tabs overflow</td><td><span class="score">5</span>: accordion + hamburger</td></tr>
+                <tr><th scope="row">Booking error prevention</th><td><span class="score">2</span>: long form</td><td><span class="score">2</span>: long form</td><td><span class="score">5</span>: step validation</td></tr>
+                <tr><th scope="row">Event discovery</th><td><span class="score">3</span>: card list</td><td><span class="score">2</span>: text list</td><td><span class="score">5</span>: calendar + filters</td></tr>
+                <tr><th scope="row">Engagement / warmth</th><td><span class="score">5</span></td><td><span class="score">2</span></td><td><span class="score">4</span></td></tr>
+                <tr><th scope="row">Build complexity (higher = simpler)</th><td><span class="score">4</span></td><td><span class="score">5</span></td><td><span class="score">3</span></td></tr>
+                <tr><th scope="row">Total</th><td><strong>24 / 35</strong></td><td><strong>22 / 35</strong></td><td><strong>31 / 35</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin-top:1.5rem"><a class="btn btn-primary" href="index.html">View the implemented prototype (Option C)</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-name">Riverside Wellbeing Hub</p>
+          <p>12 Riverside Road<br>Riverside RV1 2AB</p>
+          <p>Monday to Friday, 9am to 8pm<br>Saturday, 9am to 4pm</p>
+        </div>
+        <nav aria-label="Footer">
+          <h2 class="footer-h">Explore</h2>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="booking.html">Book a place</a></li>
+            <li><a href="news.html">News &amp; stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-h">Get in touch</h2>
+          <ul>
+            <li><a href="tel:03001234567">0300 123 4567</a></li>
+            <li><a href="mailto:hello@riversidehub.example">hello@riversidehub.example</a></li>
+          </ul>
+        </div>
+        <div class="footer-urgent">
+          <h2 class="footer-h">Need urgent help?</h2>
+          <p>In an emergency call <strong>999</strong>. For urgent mental health support call <strong>NHS 111</strong> or text <strong>SHOUT</strong> to 85258.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Riverside Community Wellbeing Hub. A prototype for 505IT HCI &amp; Web Development. Fictional organisation.</p>
+        <span class="footer-links"><a href="guide.html">Prototype guide</a><a href="design-options.html">UI design options</a><a href="evaluation.html">Evaluation</a></span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
