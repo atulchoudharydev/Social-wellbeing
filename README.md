@@ -53,7 +53,7 @@ The links to these pages are also in the footer of every page.
 1. **Book a place:** click "Book a place", press Continue with nothing selected to see the error handling, then complete all 4 steps.
 2. **Search services:** type "walk" or "debt" on the Services page.
 3. **Filter events:** pick a date with a dot on the calendar, then a topic.
-4. **Accessibility:** press **Tab** from the top of a page (skip link, visible focus), and open **Display** in the header for larger text or high contrast.
+4. **Accessibility:** press **Tab** from the top of a page (skip link, visible focus), and open **Text size** in the header for larger text or high contrast.
 5. **Slider:** use the arrows and dots on the homepage slider, and the pause button.
 
 ## Technology

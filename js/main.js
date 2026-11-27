@@ -86,9 +86,9 @@ function initDisplayMenu() {
   const holder = document.querySelector("[data-a11y]");
   if (!holder) return;
   holder.innerHTML = `
-    <button type="button" class="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel">${icon("type")}Display</button>
+    <button type="button" class="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel">${icon("type")}Text size</button>
     <div class="a11y-panel" id="a11y-panel" role="group" aria-labelledby="a11y-title" hidden>
-      <h2 id="a11y-title">Display settings</h2>
+      <h2 id="a11y-title">Text size and contrast</h2>
       <fieldset>
         <legend>Text size</legend>
         <div class="seg">

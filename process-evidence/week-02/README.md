@@ -1,6 +1,6 @@
 # Week 2: Ideate (Three Design Options)
 
-*Compiled 17 November 2026 from Week 2 design work.*
+
 
 ## What I did
 - Sketched three different UI options as low-fidelity wireframes (desktop and mobile)

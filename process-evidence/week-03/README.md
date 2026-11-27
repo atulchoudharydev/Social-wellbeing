@@ -4,7 +4,7 @@
 - Built the first working prototype of Option C in HTML, CSS and JavaScript
 - Created all six required pages: Home, Services, Events, Book a place, Contact, News and stories
 - Added the main components: accordion directory, calendar, 4-step booking form and mobile menu
-- Asked for feedback on the look and feel
+- Showed Version 1 to a classmate on 12 November 2026 and asked for feedback on the look and feel
 
 ## Version 1 at a glance
 - Teal and orange colour scheme
@@ -12,6 +12,8 @@
 - Gradient background on the homepage banner
 
 ## Feedback notes
+
+**Given by:** a classmate · **Date:** 12 November 2026 · **On:** Version 1
 
 | Feedback | My response |
 |---|---|

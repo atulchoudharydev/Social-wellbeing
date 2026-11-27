@@ -10,8 +10,6 @@
 
 ## Personas
 
-![Persona cards]
-
 | Persona | Needs | Design idea |
 |---|---|---|
 | **Margaret, 72**: older adult, uses a tablet | Large text, simple booking | Text size / contrast menu, big buttons |
